@@ -1,5 +1,5 @@
 Algoritmo ejercicio_4
-	Escribir "Introduca tres números"
+	Escribir "Introduca tres nï¿½meros"
 	Leer n1,n2,n3
 	Si n1<0 Entonces
 		Escribir "El producto es: ",n1*n2*n3
@@ -7,3 +7,5 @@ Algoritmo ejercicio_4
 		Escribir "La suma es: ",n1+n2+n3
 	FinSi
 FinAlgoritmo
+
+//Prueba con VS

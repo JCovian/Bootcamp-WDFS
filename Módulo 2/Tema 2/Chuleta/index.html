@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp</title>
+</head>
+<body>
+    <!-- Enlaces -->
+    <a href="blog.html" target="blank">Mi blog</a>
+    <a href="https://google.com" target="blank">Enlace a Google</a>
+
+    <!-- Títulos -->
+    <h1>Titulo 1</h1>
+    <h2>Titulo 2</h2>
+    <h3>Titulo 3</h3>
+    <h4>Titulo 4</h4>
+    <h5>Titulo 5</h5>
+    <h6>Titulo 6</h6>
+
+    <!-- Párafos, sin ningún formato, ignora los espacios en blanco y saltos de línea-->
+    <p>
+        Lorem ipsum dolor <a href="blog.html" target="blank">Recuerde visitar el blog</a>
+        sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+        nostrud <strong>exercitation ullamco</strong> laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure <em>dolor</em> in reprehenderit in voluptate velit esse cillum dolore eu 
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+        culpa qui officia <b>deserunt</b> mollit anim id est laborum.
+    </p>
+
+    <!-- Párrafo preformateado, mantiene espacios en blanco y saltos de línea-->
+    <pre>
+        Text in a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both       spaces and lines
+        brakes
+    </pre>
+
+    <p>
+        <s>Lorem ipsum &nbsp;&nbsp;&nbsp;dolor sit amet consectetur adipisicing elit. Saepe, reprehenderit.</s>
+    </p>
+
+    <p>
+        Lorem, ipsum dolor sit <spam>amet consectetur adipisicing</spam> elit. Nobis, facere.
+    </p>
+
+    <p>
+        La molécula preferida de cualquier programador es C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub> también llamada cafeina.
+    </p>
+
+    <p>El teorema de pitágoras es conocido por la ecuación:</p>
+    <p><var>a</var><sup>2</sup>+<var>b</var><sup>2</sup>=<var>c</var><sup>2</sup></p>
+
+    <hr>
+
+    <p>Las clases del bootcamp comenzaron a las <time datetime="16:00">16:00</time> </p>
+
+    <code>Aqui escribo código dentro de las etiquetas &lt;code&gt;.</code>
+
+    <!-- Listas ordenadas -->
+    <ol>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
+
+    <!-- Listas desordenadas -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+
+    <ol start="500">
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
+
+    <ul>
+        <li><data value="15">HTML</data></li>
+        <li><data value="16">CSS</data></li>
+        <li><data value="17">JS</data></li>
+    </ul>
+
+    <!-- Tablas -->
+    <table>
+        <caption>INFORMACION DE LOS USUARIOS</caption>
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    eMail
+                </th>
+                <th>
+                    Edad
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    John
+                </td>
+                <td>
+                    john@smith.com
+                </td>
+                <td>
+                    35
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mari
+                </th>
+                <td>
+                    mari@clair.com
+                </td>
+                <td>
+                    21
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>Pie de tabla</th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br><br>
+
+    <table>
+        <caption>Super héroes y sus skills</caption>
+        <colgroup>
+            <col>
+            <col span="2" class="Batman">
+            <col span="2" class="Flash">
+        </colgroup>
+        <tr>
+            <th></th>
+            <th>Batman</th>
+            <th>Robin</th>
+            <th>Flash</th>
+            <th>Kid Flash</th>
+        </tr>
+        <tr>
+            <th>Skill</th>
+            <td>Inteligencia</td>
+            <td>Dex, acrobacias</td>
+            <td>Super velocidad</td>
+            <td>Super velocidad</td>
+        </tr>
+    </table>
+
+    <!-- Formularios -->
+    <h3>Formularios</h3>
+    <form action="procesar-datos.php" method="POST">
+        <div class="input">
+            <label for="nameInput">Nombre:</label><br>
+            <input type="text" id="nameInput" name="nameInput" placeholder="Tu nombre">
+            <!-- Si cambiamos placeholder por value, el texto que escribamos no se borrará al escribir en la casilla -->
+        </div>
+        <br>
+        <div class="input">
+            <label for="emailInput">Correo electrónico:</label><br>
+            <input type="email" id="emailInput" name="emailInput" required>
+        </div>
+        <br>
+        <div class="input">
+            <label for="passwordInput">Contraseña:</label><br>
+            <input type="password" id="passwordInput" name="passwordInput" required>
+        </div>
+        <br>
+        <div class="input">
+            <label for="message">Comentarios:</label><br>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Introduce tus comentario"></textarea>
+        </div>
+        <br>
+        <div class=input>
+            <label for="sex">Género:</label>
+            <select name="sex" id="sex">
+                <option value="female">Femenino</option>
+                <option value="male">Masculino</option>
+                <option value="other">Otro</option>
+            </select>
+        </div>
+        <br>
+        <div class="input">
+            <label for="ageInput">Edad:</label><br>
+            <input type="number" id="ageInput" name="ageInput" value="30" min="0" max="150">
+        </div>
+        <br>
+        <div class="input">
+            <label for="carbrandInput">La marca de tu coche es:</label><br>
+            <input type="list" name="carbrandInput" id="carbrandInput">
+            <datalist id="carBrands">
+                <option value="Alfa Romeo"></option>
+                <option value="BMW"></option>
+                <option value="Citroën"></option>
+                <option value="Ford"></option>
+                <option value="Mercedes"></option>
+                <option value="Peugeot"></option>
+                <option value="VW"></option>
+                <option value="Otro"></option>
+            </datalist>
+        </div>
+        <br>
+        <fieldset disabled>
+            <legend>Información de tu pareja</legend>
+            <div class="input">
+                <label for="namepInput">Nombre:</label><br>
+                <input type="text" id="namepInput" name="namepInput" placeholder="Su nombre">
+                <!-- Si cambiamos placeholder por value, el texto que escribamos no se borrará al escribir en la casilla -->
+            </div>
+            <br>
+            <div class="input">
+                <label for="emailpInput">Correo electrónico:</label><br>
+                <input type="email" id="emailpInput" name="emailpInput" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Radio</legend>
+            <div>
+                <input type="radio" name="relationship" id="parejahecho">
+                <label for="relationshipInput">Pareja de hecho</label> 
+            </div>
+            <div>              
+                <input type="radio" name="relationship" id="marriedOption" checked>
+                <label for="relationshipInput">Casado</label>
+            </div>
+            <div>              
+                <input type="radio" name="relationship" id="marriedOption">
+                <label for="relationshipInput">Soltero</label>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Productos</legend>
+            <div>
+                <input type="checkbox" name="iphone" id="iphoneProduct" checked>
+                <label for="relationshipInput">iPhone</label> 
+            </div>
+            <div>              
+                <input type="checkbox" name="macbook" id="macbookProduct" checked>
+                <label for="relationshipInput">MacBook</label>
+            </div>
+            <div>              
+                <input type="checkbox" name="ipad" id="ipadProduct" checked>
+                <label for="relationshipInput">iPad</label>
+            </div>
+        </fieldset>
+        <br>
+
+        <label for="range">Selecciona cantidad de elementos</label>
+        <input type="range" id="range" value="66" name="range">
+
+        <br><br>
+
+        <input type="reset" value="Restablecer">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <br><hr><br>
+
+    <!-- Medidores -->
+    <label for="fuelLevel">Cantidad de gasolina</label>
+    <meter id="fuelLevel" min="0" max="100" low="33" high="66" value="65" name="meter"></meter>
+    <br><br>
+
+    <label for="fileMeter">Progreso de descarga</label>
+    <progress id="fileMeter" max="100" value="66" name=progress></progress>
+
+    <br><hr><br>
+
+    <!-- Multimedia -->
+    <a href="images/sample.jpeg">
+        <img src="images/sample.jpeg" alt="Foto de pajarito" width="75%">
+        <figcaption>Fig.1 Pájaro</figcaption>
+    </a>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OgIRAjnnJzI" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+    <br><br>
+
+    <iframe width="500px" height="315px" src="https:/codespaceacademy.com" frameborder="0"></iframe>
+
+    <br><br>
+
+    <object width="100%" height="500px" data="https://softlibre.unizar.es/manuales/linux/868.pdf" type="application/pdf"></object>
+ 
+    <br><hr><br>
+
+    <!-- Citas / Quotations-->
+    <h3>Citas / Quotations</h3>
+
+    <blockquote cite="https://codespaceacademy.com">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita provident natus suscipit. Nemo similique voluptate
+        saepe distinctio veritatis itaque accusantium cupiditate, perferendis tenetur repudiandae dolore cumque quos animi quasi
+        autem repellendus fugit voluptatibus ut? Sunt, cumque! Autem, ullam. Culpa temporibus ratione quos accusamus natus
+        tenetur, expedita autem suscipit laudantium amet dolor dolorum rerum deserunt aut fuga nobis vero iure, id voluptatum.
+        Itaque exercitationem dolore enim nobis aperiam? Possimus ducimus, quos ad temporibus necessitatibus velit soluta
+        excepturi omnis, at quibusdam, ipsam ex blanditiis nostrum aut sapiente. Autem vero facilis necessitatibus nulla ducimus
+        deleniti cupiditate alias optio excepturi laboriosam provident, repudiandae accusamus recusandae a, at vel, veniam neque
+        doloremque nemo eligendi hic accusantium. Saepe autem, obcaecati ut, itaque aut, cumque ducimus esse blanditiis ad
+        corporis molestias dolorum? Expedita quia totam consequuntur eum dolore tempora fugiat minima, cumque odio! Harum
+        sapiente mollitia sed fugit temporibus veniam officiis quia vel quaerat itaque omnis recusandae voluptates distinctio
+        atque officia, facilis quod aliquid. Commodi labore sed culpa quam quibusdam, reiciendis asperiores optio provident quos
+        minima nam quaerat repudiandae dignissimos perspiciatis quisquam? Earum sint velit ipsa, soluta vel esse eos quod quas
+        corrupti suscipit, amet excepturi culpa distinctio delectus cupiditate ab aut, sequi nesciunt. Id, praesentium
+        blanditiis?
+    </blockquote>
+
+    <q>Cita en linea, para bloque usar blockquote</q>
+
+    <q>Soy programador. <abbr title="Formación profesional">FP</abbr></q>
+
+    <address>
+        C/Llaviada 10 1A, 33011, Oviedo
+    </address>
+
+    <br><hr><br>
+
+    <!-- Scripting -->
+    <h3>Scripting</h3>
+    <script>
+        document.write("Hola gente");
+    </script>
+
+    <noscript>
+        Tu navegador no soporta JS
+    </noscript>
+
+    <div style="height: 500px;"></div>
+</body>
+</html>

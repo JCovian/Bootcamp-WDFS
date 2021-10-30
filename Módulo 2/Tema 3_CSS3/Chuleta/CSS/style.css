@@ -1,0 +1,74 @@
+* {
+    margin: 5;
+    padding: 0;
+}
+
+p {
+    color: red;
+}
+
+div {
+    margin: 10px;
+    height: 50px;
+}
+
+.greenblock {
+    background-color: red;
+}
+
+#main-block {
+    background-color: blue;
+    opacity: 0.75;
+}
+
+.box {
+    margin: 10px;
+    height: 200px;
+}
+
+h1 {
+    color: blue;
+}
+
+input[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+}
+
+p.first-line-bigger::first-letter {
+    color: blue;
+    font-size: 5em;
+}
+
+p.first-line-bigger a:visited {
+    color: green;
+}
+
+p.first-line-bigger a:hover {
+    color: yellow;
+}
+
+div.with-background {
+    height: 100vh;
+    background-image: url(../img/oficina.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed; */
+}
+
+div.with-border {
+    height: 300px;
+    width: 50%;
+    margin: auto;
+    background-color: rosybrown;
+    border-right-width: 10px;
+    border-right-style: solid;
+    border-right-color: royalblue;
+}
+
+.description {
+    padding: 50px;
+    background-color: blueviolet;
+    margin-right: 100px;
+}

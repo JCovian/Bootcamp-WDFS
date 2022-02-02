@@ -1,0 +1,26 @@
+.box {
+    height: 20px;
+    width: 95%;
+    background-color: rgb(211, 211, 211);
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(145, 145, 145);
+    overflow: auto;
+    padding: 5px;
+}
+
+.left {
+    width: 33.3%;
+    float: left;
+}
+
+.right {
+    width: 33.3%;
+    float: right;
+}
+
+.box a {
+    width:min-content;
+    text-decoration: none;
+    color: black;
+}

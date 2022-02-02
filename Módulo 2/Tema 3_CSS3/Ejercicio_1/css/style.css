@@ -1,0 +1,27 @@
+* {
+    font-size: 1em/1.3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    color: #555;
+}
+#primero p {
+    color: #336699;
+}
+a {
+    color: #cc3300;
+}
+#primero em {
+    background-color: #FFFFCC;
+    padding: .1em;
+}
+em.especial {
+    background-color: #FFCC99;
+    border: 1px;
+    border-style: solid;
+    border-color: #FF9900;
+    padding: .1em;
+}
+.normal span {
+    font-weight: bold;
+}

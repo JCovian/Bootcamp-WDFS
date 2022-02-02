@@ -1,0 +1,12 @@
+.logo-top-top{
+    width: 100px;
+    border: 1px solid black;
+    position: relative;
+}
+.align-right{
+    position: absolute;
+    right: 4px;
+}
+h1{
+    float: left;
+}

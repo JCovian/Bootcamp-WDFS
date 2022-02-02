@@ -1,0 +1,72 @@
+.cabecera, .menu, .izquierda, .seccion, .centro, .derecha, .pie {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.contenedorImg{
+    position: relative;
+    overflow: auto;
+    padding: 0px;
+    margin:0%;
+}
+.contenedorBuscar{
+    float: right;
+    overflow: auto;
+}
+
+img {
+    width: 100px; height: 30px  
+}
+
+.izquierda {
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+}
+
+.seccion {
+    box-sizing: border-box;
+    overflow: auto;
+    width: 75%;
+    float: right;
+}
+
+.centro {
+    box-sizing: border-box;
+    width: 70%;
+    float: left;
+}
+
+.derecha {
+    box-sizing: border-box;
+    width: 30%;
+    float: right;
+}
+
+footer {
+    box-sizing: border-box;
+    clear: both;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+
+}
+
+ #enlacesFooter{
+    float:left;
+    position:relative;
+    margin:auto;
+ } 
+
+ #copyright{
+    float:right;
+    position: relative;
+    margin:auto;
+ 
+ }
+
+.cabecera form {
+    position: absolute;
+    padding: 1%;
+}
+

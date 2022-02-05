@@ -49,6 +49,7 @@
     padding-top: 15px;
     padding-left: 30px;
     position: sticky;
+    position: -webkit-sticky; /* Safari */
     top: 0;
 }
 
@@ -66,7 +67,13 @@
     background-color: brown;
     height: 100px;
     width: 33%;
+    /* Elemento flotante */
     float:left;
+
+    /* Movimiento relativo al su posicion anterior */
+    position: relative;
+    top: 15px;
+    left: 15px;
 }
 
 .child-2 {
@@ -133,4 +140,54 @@
 
 .box-5, .box-6, .box-5 p, .box-6 p{
     display: inline;
+}
+
+/* -------- Flexbox --------- */
+.flex-parent {
+    display: flex;
+    /*flex-flow: row wrap;*/
+    /*height: 200px;*/
+    padding:20px;
+    background-color: indianred;
+
+    /*justify-content:flex-start;*/  /* Al ser dirección row alinea en la horizontal */
+    /*justify-content:flex-end;*/
+    /*justify-content:center;*/
+    /*justify-content:space-around;*/
+    /*justify-content:space-evenly;*/
+    justify-content:space-between;
+    gap: 10px;
+
+    
+    /*align-items:center;*/ /* Al ser row alinea en vertical */
+    /*align-items:stretch;*/
+}
+
+.flex-parent > div:nth-child(even) {
+    background-color:#ddd;
+    color: #333;
+}
+
+.flex-parent > div:nth-child(odd) {
+    background-color:#333;
+    color: #ddd;
+}
+
+[class^="flex-child-"] {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*flex-grow: 1;*/
+}
+.flex-child-2, .flex-child-3 {
+    flex-grow: 1;
+    flex-shrink: 5;
+}
+
+.flex-child-2 {
+    /* Cambiamos el orden html de los elementos*/
+    order:3;
 }

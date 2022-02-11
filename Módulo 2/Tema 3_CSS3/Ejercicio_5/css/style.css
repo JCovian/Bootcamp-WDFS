@@ -1,0 +1,84 @@
+* {
+    
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: #f4f4f4;
+    margin:0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#main-header{
+    background-color: coral;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display:inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-right: 15px;
+}
+
+.container-image {
+    background-image: url("../img/bluebck.jpg");
+    background-position: center left;
+    text-align: center;
+}
+
+.container-image h1 {
+    font-size: 3em;
+    margin: 60px 0px;
+}
+
+.content {
+    margin-top: 25px;
+}
+
+section {
+    color:#555555;
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding-right: 35px;
+}
+
+aside{
+    background-color: #333;
+    float: right;
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    section, aside{
+        float: none;
+        width:100%;
+    }
+}

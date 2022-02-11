@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightskyblue;
+    color: gray;
+}
+
+.contenedor {
+    border-radius: 10px;
+    background-color: white;
+}
+
+.contenedor {
+    width: 300px;
+    height: 500px;
+    background-color: #ddd;
+    margin: auto;
+    margin-top: 3  0px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedorCajas {
+    width: 90%;
+    flex: 1;   
+}
+
+.cajas {
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: gray; 
+}
+
+.fotousuario {
+    width: 75px;
+    height: 75px;
+    -webkit-borer-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: gray;
+}
+
+.contenedorBoton {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    /*align-items: center;*/
+    justify-content: space-evenly;
+}
+
+.boton {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: gray;
+}

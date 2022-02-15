@@ -375,3 +375,23 @@
         margin-left: 0%;
     }
 }
+
+.animations-2 {
+    animation-name: cambioColor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cambioColor {
+    from {
+        color: cornflowerblue;
+    }    
+
+    50% {
+        color: black;
+    }
+    
+    to {
+        color: cornflowerblue;
+    }
+}

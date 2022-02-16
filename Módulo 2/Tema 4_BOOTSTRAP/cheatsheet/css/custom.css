@@ -1,3 +1,7 @@
 h1 {
     margin: 30px;
 }
+
+.sized {
+    height: 100px;
+}

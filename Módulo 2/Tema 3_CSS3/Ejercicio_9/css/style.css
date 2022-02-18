@@ -1,0 +1,54 @@
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(4,100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+[class^=cubo-] {
+    background-color: deepskyblue;
+    animation-name: showin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 5px;;
+}
+
+.cubo-1 {animation-delay: 0.5s;}
+.cubo-2 {animation-delay: 1s;}
+.cubo-3 {animation-delay: 1.5s;}
+.cubo-4 {animation-delay: 2s;}
+.cubo-5 {animation-delay: 2.5s;}
+.cubo-6 {animation-delay: 3s;}
+.cubo-7 {animation-delay: 3.5s;}
+.cubo-8 {animation-delay: 4s;}
+.cubo-9 {animation-delay: 4.5s;}
+.cubo-10 {animation-delay: 5s;}
+.cubo-11 {animation-delay: 5.5s;}
+.cubo-12 {animation-delay: 6s;}
+.cubo-13 {animation-delay: 6.5s;}
+.cubo-14 {animation-delay: 7s;}
+.cubo-15 {animation-delay: 7.5s;}
+.cubo-16 {animation-delay: 8s;}
+
+@keyframes showin {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+[class^=cubo-]:hover {
+    scale: 1.1;
+    transition-property: all  ;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}

@@ -1,0 +1,42 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: "p-title p-title"
+                        "m-content g-masthead"
+                        "m-content g-masthead"
+                        "m-content g-sidebar"
+                        "g-footer g-footer";
+}
+
+.page-title {
+    background-color: #3bbad9;
+    grid-area: p-title;
+}
+
+.main-content {
+    background-color:  #ad8ffe;
+    color: gainsboro;
+    grid-area: m-content;
+}
+
+.masthead {
+    background-color:  #201248;
+    color: white;
+    grid-area: g-masthead;
+}
+
+.sidebar {
+    background-color:  #e3f4ff;
+    grid-area: g-sidebar;
+}
+
+.footer-content {
+    background-color: #fdf1c7;
+    grid-area: g-footer;
+}

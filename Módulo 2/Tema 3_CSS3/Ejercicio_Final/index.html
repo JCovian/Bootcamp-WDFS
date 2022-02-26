@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <title>Ejercicio final</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Barra de navegación lateral -->
+        <nav class="navLateral">
+            <img src="/iconos/Logo-Trisquel.svg" alt="Logo Trisquel" class="iconoLateral">
+            <i class="fa-solid fa-house iconoLateral"></i>
+            <i class="fa-solid fa-tags iconoLateral"></i>
+            <i class="fa-solid fa-image iconoLateral"></i>
+            <i class="fa-solid fa-circle-arrow-up iconoLateral"></i>
+            <i class="fa-solid fa-cart-plus iconoLateral"></i>
+            <i class="fa-solid fa-chart-column iconoLateral"></i>
+        </nav>
+        <!-- Bloque superior -->
+        <div class="bloqueSuperior">
+            <i class="fa-solid fa-magnifying-glass verde izquierda"></i>
+            <input type="text" class="sinBorde izquierda" id="idSearch" size="15" name="buscar" value="Search" />
+            <i class="fa-solid fa-bell derecha"></i>
+            <i class="fa-solid fa-braille derecha"></i>
+            <!-- Dibujamos el título y los botones superiores-->
+            <div class="titulo">
+                <h1>Products</h1>
+            </div>
+            <div class="botones">
+                <button class="derecha">Export
+                    <i class="fa-solid fa-download"></i>
+                </button>
+                <button class="derecha">Import
+                    <i class="fa-solid fa-upload"></i>
+                </button>
+            </div>
+            <!-- Menú horizontal -->
+            <nav class="menuHorizontal">
+                <ul class="menuHorizontal">
+                    <li><a href="#">All products</a></li>
+                    <li><a href="#">Draft</a></li>
+                    <li><a href="#">Coming soon</a></li>
+                    <li><a href="#">Published</a></li>
+                    <li><a href="#">On hold</a></li>
+                    <li><a href="#">Archived</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Bloque de busquedas -->
+        <div class="bloqueBusqueda">
+            <select name="select">
+                <option value="value1">Filter</option>
+            </select>
+            <div class="lupa">
+                <i class="fa-solid fa-magnifying-glass verde"></i>
+            </div>
+            <input type="search" size="60" name="q" placeholder="Search products" class="cuadroBuscar">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <i class="fa-solid fa-lightbulb verde"></i>
+        </div>
+        <!-- Etiquetas -->
+        <div class="etiquetasFiltro">
+            <p class="etiquetaAzul">EAN: 1233</p>
+            <i class="fa-solid fa-circle-xmark rojo"></i>
+            <p class="etiquetaAzul">Has photos</p>
+            <i class="fa-solid fa-circle-xmark rojo"></i>
+            <p class="etiquetaAzul">Complete: > 0%</p>
+            <i class="fa-solid fa-circle-xmark rojo"></i>
+        </div>
+        <!-- Tabla de articulos -->
+        <div class="menuArticulos">
+            <ul class="menuHorizontal">
+                <li><a href="#">Styles</a></li>
+                <li><a href="#">Variants</a></li>
+            </ul>
+        </div>
+        <div class="tablaArticulos">
+            <table>
+                <tr class="cabeceraTabla">
+                    <td>
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td colspan="5">Showing 16 products</td>
+                    <td colspan="2">
+                        <i class="fa-solid fa-gear verde"></i>
+                        <p>Sort by</p>&nbsp;
+                        <strong>NEWEST UPDATE</strong>
+                        <i class="fa-solid fa-sort"></i>
+                    </td>
+                </tr>
+                <tr class="articulosTabla">
+                    <td class="celdaCheck">
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td class="celdaImagen">
+                        <img src="img/1.jpg" alt="Articulo 1">
+                    </td>
+                    <td class="celdaArticulo">
+                        <strong>Cara RN Dress</strong>
+                        <p>3 Variants</p>
+                    </td>
+                    <td class="celdaCodigo">
+                        <strong>Code&#58;</strong>7222563-571
+                    </td>
+                    <td class="celdaDescripcion">
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/blusas
+                    </td>
+                    <td class="celdaCompleto">
+                        <b class="verde">100%</b>&nbsp;complete
+                    </td>
+                    <td class="celdaEstado">
+                        <button class="btnPublicado">PUBLISHED</button>
+                    </td>
+                </tr>
+                <tr class="articulosTabla">
+                    <td class="celdaCheck">
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td class="celdaImagen">
+                        <img src="img/2.jpg" alt="Articulo 2">
+                    </td>
+                    <td class="celdaArticulo"></td>
+                    <td class="celdaCodigo"></td>
+                    <td class="celdaDescripcion"></td>
+                    <td class="celdaCompleto"></td>
+                    <td class="celdaEstado"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Pie de página -->
+        <footer class="paginacion">
+            <p class="numPagina">1</p>
+            <p class="textoPagina">out of</p>
+            <p class="totalPaginas">10</p>
+            <i class="fa-solid fa-arrow-right verde"></i>
+        </footer>
+    </div>
+
+</body>
+
+</html>

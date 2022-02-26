@@ -1,0 +1,21 @@
+#carouselHeaderControls {
+    height: 50vh;
+}
+
+.carousel .carousel-item:nth-child(1) {
+    background: url(/img/ejercicio1/superman1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel .carousel-item:nth-child(2) {
+    background: url(/img/ejercicio1/superman2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel .carousel-item:nth-child(3) {
+    background: url(/img/ejercicio1/superman3.jpg);
+    background-position: center;
+    background-size: cover;
+}

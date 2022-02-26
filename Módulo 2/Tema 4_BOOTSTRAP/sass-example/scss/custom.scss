@@ -1,0 +1,12 @@
+/* Importamos módulos requeridos */
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+/* Nuestra personalización */
+$body-bg: #333;
+$primary: aqua;
+
+/* Acaba nuestra nuestra personalización,
+importamos bootstrap para que tome efecto */
+@import "../bootstrap/scss/bootstrap.scss";

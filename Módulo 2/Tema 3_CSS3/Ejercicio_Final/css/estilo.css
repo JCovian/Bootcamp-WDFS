@@ -1,0 +1,234 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+}
+.container {
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-template-rows: 180px 50px auto;
+    grid-template-areas:
+    "navLateral bloqueSuperior"
+    "navLateral bloqueBusqueda"
+    "navLateral etiquetasFiltro"
+    "navLateral menuArticulos"
+    "navLateral tablaArticulos"
+    "navLateral piePagina";
+}
+
+/* CSS de la barra de navegación lateral */
+.navLateral {
+    background-color: #1f2532;
+    /*width: 60px;*/
+    /*height: 100vh;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: navLateral;
+}
+
+.iconoLateral {
+    color: #505966;
+    width: 30px;
+    padding-top: 45px;
+}
+
+.iconoLateral:hover {
+    color: #7fe5b0;
+}
+
+.verde {
+    color: #1caf63;
+}
+
+/* CSS del bloque superior */
+.bloqueSuperior {
+    background-color: #f8f9fb;
+    width: 100%;
+    grid-area: bloqueSuperior;
+}
+
+.titulo {
+    clear: both;
+    margin-top: 40px;
+    float: left;
+    width: 50%;
+}
+
+.botones {
+    margin-top: 40px;
+    float: right;
+    width: 50%;
+}
+
+.botones button {
+    padding: 10px;
+    background-color: transparent;
+    border-style: groove;
+}
+
+.derecha {
+    margin-top: 20px;
+    margin-left: 10px;
+    float: right;
+}
+
+.izquierda {
+    margin-top: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+.sinBorde {
+    border-style:none;
+}
+
+/* CSS del menú Horizontal */
+.menuHorizontal {
+    clear: both;
+    margin-left: 0px;
+    padding-left: 0px;
+    grid-area: menuHorizontal;
+}
+
+.menuHorizontal ul {
+    list-style: none;
+    
+}
+.menuHorizontal li {
+    display: inline;
+    text-align: left;
+    margin: 0 10px 0 0;
+}
+
+.menuHorizontal li a {
+    padding: 2px 7px 2px 7px;
+    color: #666;
+    text-decoration: none;
+ } 
+
+ .menuHorizontal li a:hover{
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid #1caf63;
+ } 
+
+ /* CSS para el bloque de busqueda */
+ .bloqueBusqueda {
+    display: flex;
+    grid-area: bloqueBusqueda;
+    padding-top: 20px;
+ }
+
+ .bloqueBusqueda select {
+    background-color: transparent;
+    height: 30px;
+ }
+
+ .lupa {
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #e7e7e7;
+    padding-top: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+.bloqueBusqueda input {
+    border-left: none;
+    height: 30px;
+    border: solid;
+    border-left: none;
+    border-width: 2px;
+    border-color: #e7e7e7;
+ }
+
+ .fa-ellipsis-vertical {
+     padding-top: 7px;
+     padding-left: 10px;
+     padding-right: 20px;
+     color: #e7e7e7;
+ }
+
+ .fa-lightbulb {
+     background-color: #00113a;
+     padding: 7px;
+ }
+
+ /* CSS para las etiquetas del filtro */
+ .etiquetasFiltro {
+     display: flex;
+     grid-area: etiquetasFiltro;
+ }
+ .etiquetaAzul{
+    background-color: #e0e9ff;
+    color: #507ae0;
+    font-size: 0.85em;
+    text-align:center;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 15px;
+    margin-right: 0px;
+    height: 1.5em;
+ }
+ .rojo {
+     color: #f65858
+ }
+
+ .fa-circle-xmark {
+     margin-top: 17px;
+     margin-left: -9px;
+     margin-right: 8px;;
+ }
+
+ /* CSS para el menú de articulos */
+ .menuArticulos {
+     grid-area: menuArticulos;
+ }
+
+ /* CSS para la tabla de articulos */
+ .tablaArticulos {
+    grid-area: tablaArticulos;
+    color: gray;   
+ }
+
+ .tablaArticulos strong{
+     color: black;
+ }
+
+ .cabeceraTabla td {
+     color: gray;  
+ }
+
+ .celdaImagen img{
+     width: 40px;
+     height: 40px;
+ }
+
+ .celdaEstado button{
+     border: none;
+     border-radius: 10px;
+     font-weight: bold;
+ }
+
+.btnPublicado {
+    background-color: #7fe5b0;
+    color:#1caf63;
+}
+
+ /* CSS para el pie de página */
+ .paginacion {
+     grid-area: piePagina;
+     display: flex;
+ }
+
+ .fa-arrow-right {
+     padding-bottom: 5px;
+ }
+
+ .paginacion p {
+     margin: 0px;
+ }

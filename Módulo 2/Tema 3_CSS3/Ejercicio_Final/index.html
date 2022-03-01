@@ -24,10 +24,12 @@
         </nav>
         <!-- Bloque superior -->
         <div class="bloqueSuperior">
-            <i class="fa-solid fa-magnifying-glass verde izquierda"></i>
-            <input type="text" class="sinBorde izquierda" id="idSearch" size="15" name="buscar" value="Search" />
-            <i class="fa-solid fa-bell derecha"></i>
-            <i class="fa-solid fa-braille derecha"></i>
+
+            <i class="fa-solid fa-magnifying-glass verde izquierda paddinSuperior"></i>
+            <input type="text" class="sinBorde izquierda paddinSuperior" id="idSearch" size="15" name="buscar"
+                value="Search" />
+            <i class="fa-solid fa-bell derecha paddinSuperior"></i>
+            <i class="fa-solid fa-braille derecha paddinSuperior"></i>
             <!-- Dibujamos el título y los botones superiores-->
             <div class="titulo">
                 <h1>Products</h1>
@@ -51,6 +53,7 @@
                     <li><a href="#">Archived</a></li>
                 </ul>
             </nav>
+
         </div>
         <!-- Bloque de busquedas -->
         <div class="bloqueBusqueda">
@@ -86,10 +89,10 @@
                     <td>
                         <input type="checkbox" id="cbox1" value="checkbox">
                     </td>
-                    <td colspan="5">Showing 16 products</td>
-                    <td colspan="2">
+                    <td colspan="4">Showing 16 products</td>
+                    <td class="celdaOrdenacion" colspan="2">
                         <i class="fa-solid fa-gear verde"></i>
-                        <p>Sort by</p>&nbsp;
+                        Sort by&nbsp;
                         <strong>NEWEST UPDATE</strong>
                         <i class="fa-solid fa-sort"></i>
                     </td>
@@ -109,7 +112,7 @@
                         <strong>Code&#58;</strong>7222563-571
                     </td>
                     <td class="celdaDescripcion">
-                        <strong>Hicrarchy&#58;</strong>Textiles/top/blusas
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/dresses
                     </td>
                     <td class="celdaCompleto">
                         <b class="verde">100%</b>&nbsp;complete
@@ -125,23 +128,155 @@
                     <td class="celdaImagen">
                         <img src="img/2.jpg" alt="Articulo 2">
                     </td>
-                    <td class="celdaArticulo"></td>
-                    <td class="celdaCodigo"></td>
-                    <td class="celdaDescripcion"></td>
-                    <td class="celdaCompleto"></td>
-                    <td class="celdaEstado"></td>
+                    <td class="celdaArticulo">
+                        <strong>Demi Sweater</strong>
+                        <p>5 Variants</p>
+                    </td>
+                    <td class="celdaCodigo">
+                        <strong>Code&#58;</strong>7222563-779
+                    </td>
+                    <td class="celdaDescripcion">
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/swetters
+                    </td>
+                    <td class="celdaCompleto">
+                        <b class="azul">50%</b>&nbsp;complete
+                    </td>
+                    <td class="celdaEstado">
+                        <button class="btnPublicado">PUBLISHED</button>
+                    </td>
+                </tr>
+                <tr class="articulosTabla">
+                    <td class="celdaCheck">
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td class="celdaImagen">
+                        <img src="img/3.jpg" alt="Articulo 3">
+                    </td>
+                    <td class="celdaArticulo">
+                        <strong>M Carson Shafety</strong>
+                        <p>3 Variants</p>
+                    </td>
+                    <td class="celdaCodigo">
+                        <strong>Code&#58;</strong>7222563-101
+                    </td>
+                    <td class="celdaDescripcion">
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/work
+                    </td>
+                    <td class="celdaCompleto">
+                        <b class="verde">100%</b>&nbsp;complete
+                    </td>
+                    <td class="celdaEstado">
+                        <button class="btnDraft">DRAFT</button>
+                    </td>
+                </tr>
+                <tr class="articulosTabla">
+                    <td class="celdaCheck">
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td class="celdaImagen">
+                        <img src="img/4.jpg" alt="Articulo 4">
+                    </td>
+                    <td class="celdaArticulo">
+                        <strong>Terry Hoodie</strong>
+                        <p>3 Variants</p>
+                    </td>
+                    <td class="celdaCodigo">
+                        <strong>Code&#58;</strong>7222563-440
+                    </td>
+                    <td class="celdaDescripcion">
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/blusas
+                    </td>
+                    <td class="celdaCompleto">
+                        <b class="rojo">10%</b>&nbsp;complete
+                    </td>
+                    <td class="celdaEstado">
+                        <button class="btnOnhold">ON HOLD</button>
+                    </td>
+                </tr>
+                <tr class="articulosTabla">
+                    <td class="celdaCheck">
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td class="celdaImagen">
+                        <img src="img/5.jpg" alt="Articulo 5">
+                    </td>
+                    <td class="celdaArticulo">
+                        <strong>M X-Mas Sweater</strong>
+                        <p>2 Variants</p>
+                    </td>
+                    <td class="celdaCodigo">
+                        <strong>Code&#58;</strong>7222563-125
+                    </td>
+                    <td class="celdaDescripcion">
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/Sweaters
+                    </td>
+                    <td class="celdaCompleto">
+                        <b class="verde">90%</b>&nbsp;complete
+                    </td>
+                    <td class="celdaEstado">
+                        <button class="btnPublicado">PUBLISHED</button>
+                    </td>
+                </tr>
+                <tr class="articulosTabla">
+                    <td class="celdaCheck">
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td class="celdaImagen">
+                        <img src="img/6.jpg" alt="Articulo 6">
+                    </td>
+                    <td class="celdaArticulo">
+                        <strong>M Zander LS</strong>
+                        <p>3 Variants</p>
+                    </td>
+                    <td class="celdaCodigo">
+                        <strong>Code&#58;</strong>7222563-852
+                    </td>
+                    <td class="celdaDescripcion">
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/jackets
+                    </td>
+                    <td class="celdaCompleto">
+                        <b class="azul">50</b>&nbsp;complete
+                    </td>
+                    <td class="celdaEstado">
+                        <button class="btnPublicado">PUBLISHED</button>
+                    </td>
+                </tr>
+                <tr class="articulosTabla">
+                    <td class="celdaCheck">
+                        <input type="checkbox" id="cbox1" value="checkbox">
+                    </td>
+                    <td class="celdaImagen">
+                        <img src="img/7.jpg" alt="Articulo 7">
+                    </td>
+                    <td class="celdaArticulo">
+                        <strong>Payton Jacket</strong>
+                        <p>2 Variants</p>
+                    </td>
+                    <td class="celdaCodigo">
+                        <strong>Code&#58;</strong>7222563-132
+                    </td>
+                    <td class="celdaDescripcion">
+                        <strong>Hicrarchy&#58;</strong>Textiles/top/Jacket
+                    </td>
+                    <td class="celdaCompleto">
+                        <b class="azul">50%</b>&nbsp;complete
+                    </td>
+                    <td class="celdaEstado">
+                        <button class="btnDraft">DRAFT</button>
+                    </td>
                 </tr>
             </table>
         </div>
+        <div class="piePagina">
+            <footer class="paginacion">
+                <p class="numPagina">1</p>
+                <p class="textoPagina">out of</p>
+                <p class="totalPaginas">10</p>
+                <i class="fa-solid fa-arrow-right verde"></i>
+            </footer>
+        </div>
         <!-- Pie de página -->
-        <footer class="paginacion">
-            <p class="numPagina">1</p>
-            <p class="textoPagina">out of</p>
-            <p class="totalPaginas">10</p>
-            <i class="fa-solid fa-arrow-right verde"></i>
-        </footer>
     </div>
-
 </body>
 
 </html>

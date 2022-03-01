@@ -4,25 +4,40 @@
 
 body{
     background-color: #ffffff;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
 }
-.container {
+.container{
     display: grid;
-    grid-template-columns: 60px auto;
+    /*margin-left: 50px;*/
+    grid-template-columns: auto;
     grid-template-rows: 180px 50px auto;
     grid-template-areas:
-    "navLateral bloqueSuperior"
+    /*"navLateral bloqueSuperior"
     "navLateral bloqueBusqueda"
     "navLateral etiquetasFiltro"
     "navLateral menuArticulos"
     "navLateral tablaArticulos"
-    "navLateral piePagina";
+    "navLateral piePagina";*/
+    "bloqueSuperior"
+    "bloqueBusqueda"
+    "etiquetasFiltro"
+    "menuArticulos"
+    "tablaArticulos"
+    "piePagina";
 }
 
 /* CSS de la barra de navegación lateral */
 .navLateral {
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #1f2532;
-    /*width: 60px;*/
-    /*height: 100vh;*/
+    width: 50px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,6 +56,14 @@ body{
 
 .verde {
     color: #1caf63;
+}
+
+.rojo {
+    color: #f65858;
+}
+
+.azul {
+    color: #507ae0;
 }
 
 /* CSS del bloque superior */
@@ -83,6 +106,10 @@ body{
 
 .sinBorde {
     border-style:none;
+}
+
+.paddinSuperior {
+    padding: 10px;
 }
 
 /* CSS del menú Horizontal */
@@ -174,9 +201,6 @@ body{
     margin-right: 0px;
     height: 1.5em;
  }
- .rojo {
-     color: #f65858
- }
 
  .fa-circle-xmark {
      margin-top: 17px;
@@ -187,6 +211,11 @@ body{
  /* CSS para el menú de articulos */
  .menuArticulos {
      grid-area: menuArticulos;
+ }
+
+ .menuArticulos ul{
+     padding-bottom: 3px;
+     margin-bottom: 0px;
  }
 
  /* CSS para la tabla de articulos */
@@ -217,6 +246,63 @@ body{
 .btnPublicado {
     background-color: #7fe5b0;
     color:#1caf63;
+    width: 90px;
+}
+
+.btnDraft {
+    background-color: gainsboro;
+    color: gray;
+    width: 90px;
+}
+
+.btnOnhold {
+    background-color: #e0e9ff;
+    color: #507ae0;
+    width: 90px;
+}
+
+/* Aquí le voy a dar tamaño y formato a las celdas */
+.celdaArticulo {
+    width: 200px;
+}
+
+.celdaCodigo {
+    width: 180px;
+}
+
+.celdaDescripcion {
+    width: 280px;
+}
+
+.celdaCompleto {
+    width: 160px;
+}
+
+.celdaEstado {
+    width: 100px;
+}
+
+.celdaArticulo p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.celdaOrdenacion strong{
+    color:#505966;
+    text-align: right;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr{
+    height: 60px;
+}
+
+td{
+    border-top: 1px solid rgb(190, 190, 190);
+    border-bottom: 1px solid rgb(190, 190, 190);
 }
 
  /* CSS para el pie de página */
@@ -231,4 +317,30 @@ body{
 
  .paginacion p {
      margin: 0px;
+ }
+
+ .numPagina {
+     border: 1px solid rgb(190, 190, 190);
+     padding: 5px;
+     padding-left: 10px;
+     padding-right: 10px;
+ }
+
+ .textoPagina {
+     padding: 5px;
+ }
+
+ .totalPaginas {
+     padding: 5px;
+ }
+
+ .fa-arrow-right {
+     padding: 5px;
+ }
+
+ .piePagina {
+     display:flex;
+     height: 100px;
+     justify-content: center;
+     align-items: center;
  }

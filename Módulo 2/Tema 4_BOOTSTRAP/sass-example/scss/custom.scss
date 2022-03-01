@@ -5,7 +5,14 @@
 
 /* Nuestra personalización */
 $body-bg: #333;
-$primary: aqua;
+
+$theme-colors: (
+    "primary": yellow,
+);
+
+div {
+    height: 150px;
+}
 
 /* Acaba nuestra nuestra personalización,
 importamos bootstrap para que tome efecto */

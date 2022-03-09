@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet javascript</title>
+    <style>
+        a {
+            display: block;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="alert('Hey, soy un script inline');">Inline script</a>
+    <a href="#" onclick="console.log('Hey, soy un script inline');">Inline script</a>
+    <a href="#">Internal script</a>
+    <a href="#" id="external">External script</a>
+
+    <script>
+        function hey() {
+            alert("Hey");
+        } ;
+        document.getElementsByTagName("a")[2].addEventListener("click",hey);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

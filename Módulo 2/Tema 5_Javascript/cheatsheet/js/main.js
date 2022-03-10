@@ -241,7 +241,28 @@ function myFunction(item, index) {
     console.log(`Elmento ${index} es: ${item}`);
 }
 
-// El anterior forEach es equivalente al siguiente for
+// forEach con anónima
+selectedColors.forEach(function(item, index) {
+    console.log(`forEach con anónima: Elemento ${index} es: ${item}`)
+});
+
+// Los anterioriores forEach son equivalentes al siguiente for
 for (let i = 0; i < selectedColors.length; i++) {
-    console.log(`Elemento ${i} es: ${selectedColors[i]}`);
+    console.log(`FOR común: Elemento ${i} es: ${selectedColors[i]}`);
+}
+
+// For ... of
+for (let color of selectedColors) {
+    console.log(`FOR .. OFF: ${color}`);
+}
+
+// ------------------------------- DOM ---------------------------
+console.log(document);
+console.log(document.URL);
+console.log(document.domain);
+console.log(document.title);
+
+document.getElementById("miBoton").addEventListener("click", buttonClick);
+function buttonClick(e) {
+    document.body.style.backgroundColor = "red";
 }

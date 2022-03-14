@@ -111,6 +111,52 @@ console.log(car2.brand, car2.weigh, car2.owner, car2.year);
 let inputAttribute = "year";
 console.log(car1[inputAttribute]);
 
+const users = [
+    {
+        id: 1,
+        userName: "u1",
+    },
+    {
+        id: 2,
+        userName: "u2",
+    }
+];
+
+// Constructores de objetos utilizando funciones
+// ** Hace falta entender las funciones primero
+function Car(brand, color, weight, topSpeed) {
+    this.brand = brand;
+    this.color = color;
+    this.weight = weight;
+    this.topSpeed = topSpeed;
+
+    this.description = () => `Este ${this.brand} ${this.color} pesa ${this.weight}kg` +
+    ` y puede llegar a los ${this.topSpeed}km/h`;
+}
+
+const miCoche1 = new Car("BMW", "red", 1800, 230);
+const miCoche2 = new Car("Volvo", "azul", 2000, 210);
+console.log(miCoche1, miCoche2);
+console.log(miCoche1.description());
+console.log(miCoche2.description());
+
+for (let propiedad in miCoche1) {
+    console.log(propiedad);
+}
+
+for (let key of Object.keys(miCoche1)) {
+    console.log(key);
+}
+for (let key of Object.values(miCoche1)) {
+    console.log(key);
+}
+
+miCoche1.year = 2019;
+
+if ("year" in miCoche1) {
+    console.log("El coche tiene el año especificado");
+}
+
 //------------------- Arrays ---------------------
 let selectedColors = ["red", "blue", "purple", "green", "white", "cyan"];
 console.log(typeof selectedColors, selectedColors, selectedColors.length);
@@ -222,7 +268,7 @@ console.log(numArray);
 numArray.sort((a,b) => b - a); // For ascending sort
 console.log(numArray);
 
-// ----------------------- Funciones -----------------------------
+// ----------------------- Bucles -----------------------------
 // For
 for (let i = 1; i < 6; i++) {
     console.log(i);
@@ -256,13 +302,65 @@ for (let color of selectedColors) {
     console.log(`FOR .. OFF: ${color}`);
 }
 
+// break rompe un bucle en concreto
+let k = 0;
+let z = 0;
+
+labelBreakLoop: while (true) {
+    console.log("Outer loop: ", k);
+    k++;
+    z = 0;
+    while(true) {
+        console.log("Inner loops: ",z);
+        z++;
+        if (z === 10 && k === 10) {
+            break labelBreakLoop;
+        } else if (z === 10) {
+            break;
+        }
+    }
+}
+console.log("Se acabó");
+
+// continue para saltarse una iteración en concreto
+for (let i = 0; i < 5; i++) {
+    if (i === 3)
+        continue;
+    console.log("Using continue: ", i);
+}
+
 // ------------------------------- DOM ---------------------------
+// Aspectos básicos
 console.log(document);
 console.log(document.URL);
 console.log(document.domain);
 console.log(document.title);
+console.log(document.links);
+console.log(document.images);
 
 document.getElementById("miBoton").addEventListener("click", buttonClick);
 function buttonClick(e) {
     document.body.style.backgroundColor = "red";
 }
+
+// Selectores
+const contenedores = document.getElementsByTagName("div");
+const grandparent = contenedores [0];
+const grandparent2 = contenedores["grandparent"];
+const grandparent3 = contenedores.grandparent;
+
+const parents = document.getElementsByClassName("parent");
+let parent1 = parents [0];
+parent1 = parents["parent1"];
+parent1 = parents.parent1;
+
+const child1 = document.getElementById("child1");
+
+const child2 = document.querySelector("div#grandparent.grandparent>.parent#parent1>#child2");
+const children = document.querySelectorAll(".child");
+
+child1.innerHTML = "<span style='color:red;'>Child ONE</span>";
+child2.textContent += "!";
+child1.style.backgroundColor = "black";
+
+// Creación de elementos

@@ -10,6 +10,19 @@
             display: block;
             font-size: 2em;
         }
+        #grandparent, #grandparent div {
+            padding: 25px;
+            border: 5px solid black;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .grandparent {background-color: brown;}
+        .parent {background-color: darkcyan;}
+        .child {background-color: khaki;}
     </style>
 </head>
 <body>
@@ -18,6 +31,20 @@
     <a href="#">Internal script</a>
     <a href="#" id="external">External script</a>
     <button id="miBoton">Cambiar background</button>
+
+    <h1>Acceso al DOM</h1>
+    <div class="grandparent" id="grandparent">
+        <div class="parent" id="parent1">
+            <div class="child" id="child1">Child 1</div>
+            <div class="child" id="child2">Child 2</div>
+        </div>
+        <div class="parent" id="parent2">
+            <div class="child" id="child3">Child 3</div>
+            <div class="child" id="child4">Child 4</div>
+        </div>
+    </div>
+
+
 
     <script>
         function hey() {

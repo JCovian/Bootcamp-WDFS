@@ -361,6 +361,63 @@ const children = document.querySelectorAll(".child");
 
 child1.innerHTML = "<span style='color:red;'>Child ONE</span>";
 child2.textContent += "!";
-child1.style.backgroundColor = "black";
+child1.style.backgroundColor = "gray";
 
 // Creación de elementos
+let newDiv = document.createElement("div");
+newDiv.id = "identificador";
+newDiv.setAttribute("title", "divTitle");
+newDiv.title = "divTitle";
+newDiv.textContent = "Child 2.5";
+newDiv.innerText = "Child 2.5"; // Similar a textContent pero respeta estilos.
+
+// Modificacion de CSS
+newDiv.style.backgroundColor = "red";
+newDiv.style.border = "2px solid black";
+newDiv.style.cssText = "background-color: red; color: white;"; //Este método no es muy recomendable
+
+newDiv.className = "btn btn-primary";
+newDiv.className += "newClass";
+// Recomendado + buena práctica
+newDiv.classList.add("otherClass");
+newDiv.classList.remove("newClass");
+newDiv.classList.toggle("newClass");
+newDiv.classList.toggle("newClass");
+
+// Anexarlo en los hijos
+parent1.appendChild(newDiv);
+parent1.appendChild(newDiv); // Sobreescribe al primero, no puede haber 2 instancias del mismo nodo
+const otherDiv = newDiv.cloneNode(true);
+otherDiv.id = "otherID";
+otherDiv.textContent = "Other Div";
+//parent1.prepend(otherDiv);
+//parent1.insertBefore(otherDiv, child2);
+
+// Anexarlo al mismo nivel
+//parent1.after(otherDiv);
+parent1.before(otherDiv);
+
+// Eliminar nodes / elementos
+otherDiv.remove();
+
+// Eventos
+const miBoton = document.querySelectorAll("button")[0];
+miBoton.addEventListener("click", buttonClick);
+
+function buttonClick(envent) {
+    miBoton.textContent = "Nuevo Texto";
+}
+
+document.querySelectorAll("button")[1].addEventListener("click", buttonClickColor);
+document.querySelectorAll("button")[2].addEventListener("click", buttonClickColor);
+document.querySelectorAll("button")[3].addEventListener("click", buttonClickColor);
+
+const buttonSetting = {
+    boton1: "red",
+    boton2: "yellow",
+    boton3: "blue",
+}
+
+function buttonClickColor(event) {
+    document.body.style.backgroundColor = buttonSetting[event.target.id];
+}

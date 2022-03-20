@@ -18,17 +18,72 @@ function buttonClick(envent) {
 
 // Punto 3
 const miImg = document.getElementById("miImg");
-document.querySelectorAll("a")[0].addEventListener("click",linkClick);
-document.querySelectorAll("a")[1].addEventListener("click",linkClick);
-document.querySelectorAll("a")[2].addEventListener("click",linkClick);
 
-const selectLink = {
-    link1: "https://cdn.pixabay.com/photo/2022/03/06/05/30/clouds-7050884_960_720.jpg",
-    link2: "https://pixabay.com/es/photos/mar-arco%c3%adris-la-lluvia-subtropical-7039471/",
-    link3: "https://pixabay.com/es/photos/tulipanes-flores-campo-cielo-6897351/",
+function getUrl (event) {
+    miImg.src = event.target.textContent;
 }
 
-function linkClick(event) {
-    //miImg.src = selectLink[event.target.id];
-    miImg.src = "https://pixabay.com/es/photos/tulipanes-flores-campo-cielo-6897351/"
+document.getElementById("lista").addEventListener("click",getUrl);
+
+// Punto 4
+const btnText = document.getElementById("btnTxt");
+const myInput  = document.querySelector("input");
+const divPunto4 = document.getElementById("divPunto4");
+const parrafoInput = document.createElement("p");
+
+btnText.addEventListener("click", () => parrafoInput.textContent = myInput.value);
+divPunto4.appendChild(parrafoInput);
+
+//Punto 4.2
+const myInput42  = document.getElementById("input42");
+const divPunto42 = document.getElementById("divPunto42");
+const parrafoInput42 = document.getElementById("parrafo42");
+
+myInput42.addEventListener("input", function(event){
+    parrafoInput42.textContent = event.target.value;
+});
+
+// Punto 5
+let textArea5 = document.getElementById("textArea5");
+let btn5 = document.getElementById("btn5");
+let parrafo5 = document.getElementById("parrafo5");
+btn5.addEventListener("click", countText);
+
+function countText(event) {
+    if (textArea5.value.length > 15) {
+        parrafo5.textContent = ("El contenido del área de texto es mayor de 15 carácteres");
+    } else {
+        parrafo5.textContent = ("El contenido del área de texto es menor de 15 carácteres");
+    }
+}
+
+// Punto 6
+let input6 = document.getElementById("input6");
+let bnt6 = document.getElementById("btn6");
+bnt6.addEventListener("click",esPar);
+
+function esPar(event) {
+    if (input6.value % 2 === 0) {
+        input6.style.borderColor = "red";
+        alert("El número es par");
+    } else input6.style.border = "revert";
+}
+
+// Punto 7
+let lista7 = document.getElementById("lista7");
+let arrayLi = [];
+
+for (i = 1; i < 11; i++) {
+    arrayLi[i] = document.createElement("li");
+    arrayLi[i].textContent = 'Elemento ' + i;
+    lista7.appendChild(arrayLi[i]);
+}
+
+// Punto 7 otra opción
+const lista72 = document.getElementById("lista72");
+
+for (i = 1; i < 11; i++) {
+    let miLi = document.createElement("li");
+    miLi.textContent = `Elemento ${i}`;
+    lista72.appendChild(miLi);
 }

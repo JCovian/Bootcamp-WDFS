@@ -420,4 +420,29 @@ const buttonSetting = {
 
 function buttonClickColor(event) {
     document.body.style.backgroundColor = buttonSetting[event.target.id];
+    console.log(`Alt: ${event.altKey} || Ctrl: ${event.ctrlKey} || Shift: ${event.shiftKey} ||`);
 }
+
+
+const h2 = document.querySelector("h2");
+document.body.addEventListener("mousemove", updateCoords);
+function updateCoords (event) {
+    h2.textContent = `Coordenadas: X:${event.x} Y:${event.y}`
+}
+
+const input = document.querySelector("input");
+input.addEventListener("focus", logEvent);
+input.addEventListener("blur", logEvent);
+input.addEventListener("keyup", logEvent);
+
+function logEvent(e) {
+    console.log(e.type);
+    if (e.type === "focus") {
+        e.target.style.backgroundColor = "red";
+    } else if (e.type === "blur") {
+        e.target.style.backgroundColor = "white";
+    } else {
+        input.previousElementSibling.textContent = e.target.value;
+    }
+}
+

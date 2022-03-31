@@ -70,6 +70,20 @@ console.log(str.replace("mundo", "peña"));
 
 console.log(`${name} tiene ${age} años.`);
 
+console.log ("Hola futuro.".split(" ").join("-"));
+
+// Parsing - Cambio de dato
+console.clear();
+let num3 ="1000";
+console.log(typeof num3,num3);
+console.log(typeof parseInt(num3), parseInt(num3));
+console.log(typeof parseFloat(num3), parseInt(num3));
+console.log(typeof Number(num3), Number(num3));
+
+console.log("1000" + 1000, typeof("1000" + 1000));
+console.log(1000 + + "1000", typeof(1000 + "1000"));
+console.log("1000" * 1, typeof("1000" * 1));
+
 // ------------- Objetos -------------------
 const car1 = {
     brand: "BMW",

@@ -460,3 +460,94 @@ function logEvent(e) {
     }
 }
 
+// Aspectos más avanzados - Higher order functions
+// Map
+let array1 = [1,2,3];
+let array2 = [];
+console.log("Array 1: ", array1);
+
+// Quiero que dado el array1, me copie el doble en el array2
+for (let i = 0; i < array1.length; i++) {
+    array2.push(array1[i]*2);
+}
+console.log("Array 2 con for: ",array2);
+
+// Ahora hago lo mismo con map
+array2 = array1.map(function (value, index) {
+    return value * 2;
+});
+console.log("Array 2 con map:",array2);
+
+// A partir de un array de años de nacimiento
+// generar otro, pero con las edades
+let birthdays = [1975, 1978, 2009];
+let ages = [];
+const thisYear = new Date().getFullYear();
+
+ages = birthdays.map(function(value,index) {
+    return thisYear - value;
+});
+console.log("Edades: ",ages);
+
+ages = birthdays.map(value => thisYear - value);
+console.log("Edades con función flecha: ", ages);
+
+// Filter
+// Este ejemplo copia a otro array solo los precios mayores que 50
+let prices = [150,50,49,51,15,237];
+let expensivePrices = [];
+
+for (let price of prices) {
+    if (price >= 50) {
+        expensivePrices.push(price);
+    }
+}
+console.log("Forma convencional: ", expensivePrices);
+
+expensivePrices = prices.filter(price => price >= 50);
+console.log("Con filter: ",expensivePrices);
+
+// A partir de un Array de personas (objetos) con nombre y edad, filtrar
+// aquellas mayores de edad
+const people = [
+    {name: "Juan", age: 21,},
+    {name: "Fran", age: 7,},
+    {name: "Maria", age: 39,},
+    {name: "Sofia", age: 18,},
+]
+console.log(people);
+
+const adults = people.filter(person => person.age >= 18);
+console.log (adults);
+
+// Ahora vamos a mostrar el nombre de los adultos.
+const adultNames = adults.map(person => person.name);
+console.log(adultNames);
+
+// Reduce
+// Para obtener la suma acumulada de un array
+const arr1 = [10, 7, 13, 20];
+const suma1 = arr1.reduce((sumaAcumulada,number) => sumaAcumulada + number, 0);
+console.log(suma1);
+
+// Sort
+// Para ordenar un array
+/*arr1.sort(function (a,b) {
+    if (a > b) {
+        return 1;
+    } else if (a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
+});*/
+/*arr1.sort(function (a,b) {
+    return a - b;
+});*/
+arr1.sort((a,b) => a - b);
+console.log(arr1);
+
+//const orderedPeople = people.sort((person1, person2) => person1.age - person2.age);
+//console.log(orderedPeople);
+people.sort((person1,person2) => person1.age - person2.age);
+console.log(people);

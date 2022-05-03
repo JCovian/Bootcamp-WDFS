@@ -393,6 +393,7 @@ console.log(capitalize("comprobaré los errores de la consola antes de pedir ayu
 console.log("");
 console.log("********** Apartado 28 ***********");
 
-const returnOpposite = logic => logic === true ? false : true;
+//const returnOpposite = logic => logic === true ? false : true;
+const returnOpposite = logic => !logic;
 console.log(returnOpposite(true));
 console.log(returnOpposite(false));

@@ -58,7 +58,7 @@ let btn5 = document.getElementById("btn5");
 let parrafo5 = document.getElementById("parrafo5");
 btn5.addEventListener("click", countText);
 
-function countText(event) {
+function countText() {
     if (textArea5.value.length > 15) {
         parrafo5.textContent = ("El contenido del área de texto es mayor de 15 carácteres");
     } else {
@@ -71,11 +71,11 @@ let input6 = document.getElementById("input6");
 let bnt6 = document.getElementById("btn6");
 bnt6.addEventListener("click",esPar);
 
-function esPar(event) {
+function esPar() {
     if (input6.value % 2 === 0) {
-        input6.style.borderColor = "red";
+        input6.style.border = "revert"
         alert("El número es par");
-    } else input6.style.border = "revert";
+    } else input6.style.borderColor = "red";
 }
 
 // Punto 7
@@ -111,16 +111,17 @@ function pulsadoOn(event) {
 function ventanaNueva(event) {
     if (pulsado === true) {
         pulsado = false;
-        link8.setAttribute("target","_blank"); 
+        //link8.setAttribute("target","_blank"); 
+        link8.target = "_blank";
     }
 }
 
 // Punto 9
 let parrafo9 = document.getElementById("parrafo9");
-let selector9 = document.getElementById("selector9");
-selector9.addEventListener("change",cambiaColor);
+//let selector9 = document.getElementById("selector9");
+//selector9.addEventListener("change",cambiaColor);
 
-function cambiaColor(event) {
+/*function cambiaColor(event) {
     let color = selector9.options[selector9.selectedIndex].value;
     console.log(color);
     switch (color) {
@@ -143,7 +144,10 @@ function cambiaColor(event) {
             parrafo9.setAttribute("style","color: blue");
             break;
     }
-}
+}*/
+document.querySelector("#selector9").addEventListener("change", e => {
+    parrafo9.style.color = e.target.value;
+});
 
 // Punto 10
 const numero = document.getElementById("numRandom");

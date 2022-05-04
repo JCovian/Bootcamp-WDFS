@@ -146,7 +146,7 @@ function Car(brand, color, weight, topSpeed) {
 
     this.description = () => `Este ${this.brand} ${this.color} pesa ${this.weight}kg` +
     ` y puede llegar a los ${this.topSpeed}km/h`;
-}
+} // Pre ES5
 
 const miCoche1 = new Car("BMW", "red", 1800, 230);
 const miCoche2 = new Car("Volvo", "azul", 2000, 210);
@@ -170,6 +170,7 @@ miCoche1.year = 2019;
 if ("year" in miCoche1) {
     console.log("El coche tiene el año especificado");
 }
+
 
 //------------------- Arrays ---------------------
 let selectedColors = ["red", "blue", "purple", "green", "white", "cyan"];

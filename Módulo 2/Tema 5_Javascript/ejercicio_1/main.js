@@ -159,15 +159,19 @@ let btn10 = document.getElementById("btn10");
 btn10.addEventListener("click",addRandom);
 
 function generaRandom () {
-    return Math.floor((Math.random() * (1000 - 0 +1)) + 0);
+    //return Math.floor((Math.random() * (1000 - 0 +1)) + 0);
+    return Math.floor(Math.random() * 1000);
+    //return parseInt(Math.random() * 1000);
 }
 
 function addRandom () {
     numero.textContent = generaRandom();
-    total.textContent = Number(total.textContent) + 1;
+    //total.textContent = Number(total.textContent) + 1;
+    total.textContent ++;
     if (numero.textContent % 2 == 0) {
-        pares.textContent = Number(pares.textContent) + 1;
-    } else impares.textContent = Number(impares.textContent) + 1;
+        //pares.textContent = Number(pares.textContent) + 1;
+        pares.textContent ++;
+    } else impares.textContent ++; //impares.textContent = Number(impares.textContent) + 1;
 }
 
 // Punto 11
@@ -201,3 +205,29 @@ btn12.addEventListener("click",eliminaClase);
 function eliminaClase () {
     btn12.classList.toggle("btn");
 }
+
+// Apartado Extra: Refactorizar código
+const buttons = document.getElementsByClassName('btn13'); // Devuelve HTML collection
+
+/*buttons[0].addEventListener('click', () => {
+    buttons[0].style.backgroundColor = "red";
+});
+
+buttons[1].addEventListener('click', () => {
+    buttons[1].style.backgroundColor = "red";
+});
+
+buttons[2].addEventListener('click', () => {
+    buttons[2].style.backgroundColor = "red";
+});*/
+
+// Solución 1:
+Array.from(buttons).forEach(button => button.onclick = e => e.target.style.backgroundColor = "red");
+
+// Solución 2:
+buttons = document.querySelectorAll("btn13"); //Devuelve Nodelist que tiene disponible forEach
+button.forEach(button => {
+    button.addEventListener("click", function(e) {
+        e.target.style.backgroundColor = "red";
+    });
+});

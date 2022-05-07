@@ -283,6 +283,74 @@ console.log(numArray);
 numArray.sort((a,b) => b - a); // For ascending sort
 console.log(numArray);
 
+// Higher order functions
+// map
+let ar1 = [1, 2, 3];
+let ar2 = [];
+
+for (let num of ar1) {
+    ar2.push(num * 2);
+}
+console.log(ar1, ar2);
+
+ar1 = [1, 2, 3];
+ar2 = ar1.map(item => item * 2);
+console.log("Resultado con map: ", ar1, ar2);
+
+// A partir de un array con los de nacimiento, calcular edades
+const birthYears = [1980, 1990, 1975, 1970];
+let edades = [];
+const currentTime = new Date();
+const currentYear = currentTime.getFullYear();
+
+edades = birthYears.map(year => currentYear - year);
+console.log(edades);
+
+// filter
+const prices2 = [150, 50, 49, 51, 15, 237];
+const expensives = [];
+
+for (let price of prices2) {
+    if (price >= 50) {
+        expensives.push(price)
+    }
+}
+console.log(expensives)
+
+const expensives2 = prices2.filter(price => price >= 50);
+console.log(expensives2);
+
+const computers = [
+    {
+        brand: "HP",
+        model: "elite",
+        year: 2012
+    },
+    {
+        brand: "Asus",
+        model: "TUF",
+        year: 2021
+    },
+    {
+        brand: "Lenovo",
+        model: "ThinkPad",
+        year: 2006
+    }
+];
+
+console.log(computers.filter(computer => computer.year > 2010));
+
+// computers = ["HP", "Asus", "Lenovo"];
+console.log(computers.map(car => car.brand));
+
+// sort
+computers.sort((computer1, computer2) => computer1.year - computer2.year);
+console.log(computers);
+
+// reduce --> obtiene la suma acumulada de un array
+const arr = [10, 7, 13, 20];
+console.log(arr.reduce((sum,currentNumner) => sum + currentNumner, 0))
+
 // ----------------------- Bucles -----------------------------
 // For
 for (let i = 1; i < 6; i++) {

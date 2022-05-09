@@ -264,3 +264,10 @@ const table = new Table();
 
 table.createElement();
 listItem.createElement();
+
+// How to copy an object
+let obj1 = {property: 5};
+let obj2 = obj1; // NO es una copia. Es el mismo objeto con dos nombres.
+
+obj2 = {...obj1}; // Copia superficial que usaremos practicamente siempre.
+obj2 = JSON.parse(JSON.stringify(obj1)); // Copia profunda o total.

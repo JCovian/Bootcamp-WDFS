@@ -348,8 +348,8 @@ computers.sort((computer1, computer2) => computer1.year - computer2.year);
 console.log(computers);
 
 // reduce --> obtiene la suma acumulada de un array
-const arr = [10, 7, 13, 20];
-console.log(arr.reduce((sum,currentNumner) => sum + currentNumner, 0))
+const arr = [10, 7, 13, 20]; // Da 50
+console.log(arr.reduce((sum,currentNumner) => sum + currentNumner, 0));
 
 // ----------------------- Bucles -----------------------------
 // For

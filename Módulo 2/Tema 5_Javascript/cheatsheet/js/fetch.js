@@ -45,3 +45,23 @@ async function requestURL(url) {
 console.log(1);
 requestURL(url);
 console.log(3);
+
+// Petición con método HTTP POST en lugar de GET
+const POST_URL = "http://jsonplaceholder.typicode.com/posts";
+
+const newPost = {
+    title: "mi título",
+    body: "mi cuerpo de comunicación"
+}
+
+const http = {
+    method: "POST",
+    headers: {
+        "content-type": "application/json"
+    },
+    body: JSON.stringify(newPost)
+};
+
+fetch(POST_URL, http)
+    .then(response => response.json())
+    .then(data => console.log(data));

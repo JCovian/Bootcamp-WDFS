@@ -3,11 +3,16 @@
 // primeros 20 elementos.
 
 const listComments = document.getElementById("listComments");
-const url = "http://jsonplaceholder.typicode.com/comments";
+const url = "http://jsonplaceholder.typicode.com/posts";
 
 function fillList(array) {
+    listComments.innerHTML = "";
     array.slice(0,20).forEach(comment => {
-        listComments.innerHTML += `<li>${comment.name}</li>`;
+        listComments.innerHTML 
+            += `<li class="list-group-item">
+                    <h1>${comment.title}</h1>
+                    <p>${comment.body}</p>
+                </li>`;
     });
 }
 

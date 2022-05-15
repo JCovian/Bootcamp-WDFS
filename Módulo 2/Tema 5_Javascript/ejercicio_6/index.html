@@ -11,11 +11,27 @@
 
 <body>
     <div class="container">
-        <ul class="list-group" id="listComments"></ul>
+        <h2>6.1 Post - Paginación lado del cliente</h2>
+        <button type="button" class="btn btn-primary previousPage">Anterior</button>
+        <button type="button" class="btn btn-primary nextPage">Siguiente</button>
+        <div id="posts"></div>
+        <button type="button" class="btn btn-primary previousPage">Anterior</button>
+        <button type="button" class="btn btn-primary nextPage">Siguiente</button>
+
+        <h2 class="mt-5">6.2 Login y paginación desde el servidor</h2>
+        <form action="">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="email" class="form-control" placeholder="Introduce tu email" value="eve.holt@reqres.in">
+                <input type="password" class="form-control" placeholder="*****************" value="cityslicka">
+                <button type="button" class="btn btn-primary" id="loginButton">Iniciar sesión</button>
+            </div>
+        </form>
+        <ul class="list-group" id="usersList"></ul>
     </div>
-    <div class="container">
-        <span></span>
-    </div>
+
     
 
     <script src="js/main.js"></script>

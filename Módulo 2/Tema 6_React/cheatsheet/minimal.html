@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet</title>
+</head>
+<body>
+    <!-- Toda nuestra app estará dentro de este div -->
+    <div id="root"></div>
+
+    <!-- Importamos React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Importamos babel para poder procesar JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        const root = document.querySelector("#root");
+        const title = <h1>Hola, mundo.</h1>;
+        ReactDOM.render(title, root);
+    </script>
+</body>
+</html>

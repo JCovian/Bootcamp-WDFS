@@ -2,7 +2,7 @@ import List from "./List";
 
 export default function Shop() {
   
-    const shop = {
+    const shoppingList = {
         electronica: [
             {id: 28, producto: "Equipo Hi-Fi", marca: "Samsung", modelo: "VF235", precio: 179},
             {id: 27, producto: "Televisor", marca: "LG", modelo: "XP7302", precio: 399},
@@ -22,9 +22,9 @@ export default function Shop() {
 
     return (
     <div>
-        <List />
-        <List />
-        <List />
+        <List categoria="electronica" productos={shoppingList.electronica} />
+        <List categoria="alimentacion" productos={shoppingList.alimentacion} />
+        <List categoria="mascotas" productos={shoppingList.mascotas} />
     </div>
     )
 }

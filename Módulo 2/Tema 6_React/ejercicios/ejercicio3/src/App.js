@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="container">
       <h2 className='my-4'>Agenda</h2>
-      <Agenda contacts = {contacts} />
+      <Agenda contacts = {contacts} setContacts = {setContacts} />
       <h2 className="my-4">Nuevo contacto</h2>
       <Formulario setContacts={setContacts}/>
     </div>

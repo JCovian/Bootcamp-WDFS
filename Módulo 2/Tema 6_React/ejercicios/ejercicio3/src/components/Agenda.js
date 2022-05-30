@@ -1,7 +1,13 @@
 import React from 'react'
 
-export default function Agenda({ contacts }) {
+export default function Agenda({ contacts, setContacts }) {
   
+  const removeContact = phoneNumber=> {
+    return e => {
+      setContacts(contacts.filter(contact => contact.phoneNumber != phoneNumber));
+    } 
+  }
+
   return (
     <div className='row'>
       {contacts.map((contact, index) => {
@@ -11,7 +17,10 @@ export default function Agenda({ contacts }) {
             <li className='list-group-item'>{contact.name}</li>
             <li className='list-group-item'>{contact.lastName}</li>
             <li className='list-group-item'>{contact.phoneNumber}</li>
-            <li className='list-group-item'>{contact.address}, {contact.postalCode}, {contact.city}</li>           
+            <li className='list-group-item'>{contact.address}, {contact.postalCode}, {contact.city}</li> 
+            <li className='list-group-item'>
+              <button className='btn btn-danger' onClick={removeContact(contact.phoneNumber)}>Borrar</button>
+            </li>          
           </ul>
         )
       })}

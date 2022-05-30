@@ -38,7 +38,7 @@ export default function Formulario({ setContacts }) {
     city: '' 
   }
 
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState(initialState);
 
   function handleInput(e) {
     const inputName = e.target.id;
@@ -49,27 +49,27 @@ export default function Formulario({ setContacts }) {
   function submit(e) {
     e.preventDefault();
 
-    const newContact = {
-      name: form.name,
-      lastName: form.lastName,
-      phoneNumber: form.phoneNumber,
-      address: form.address,
-      postalCode: form.postalCode,
-      city: form.city,
-    };
+    //const newContact = {
+    //  name: form.name,
+    //  lastName: form.lastName,
+    //  phoneNumber: form.phoneNumber,
+    //  address: form.address,
+    //  postalCode: form.postalCode,
+    //  city: form.city,
+    //};
 
     //const newContact = {name, lastName, phoneNumber, address, postalCode, city};
 
-    setContacts(currentContacts => [...currentContacts, newContact]);
+    setContacts(currentContacts => [...currentContacts, form]);
 
-    //e.target.reset(); //Vacia el formulario, pero no los estados
+    //e.target.reset(); // Vacia el formulario, pero no los estados
     //setName('');
     //setLastName('');
     //setPhoneNumber('');
     //setAddress('');
     //setPostalCode('');
     //setCity('');
-    setForm(initialState);
+    setForm(initialState); // Reinicia el formulario
   }
 
   return (
@@ -77,10 +77,10 @@ export default function Formulario({ setContacts }) {
       <input id="name"        className='form-control mb-3'      value={form.name}        type="text" onChange={handleInput} placeholder='Introduce el nombre' />
       <input id="lastName"    className='form-control mb-3'      value={form.lastName}    type="text" onChange={handleInput} placeholder='Introduce los apellidos' />
       <input id="phoneNumber" className='form-control mb-3'      value={form.phoneNumber} type="text" onChange={handleInput} placeholder='Introduce el teléfono' />
-      <input id="adress"      className='form-control mb-3'      value={form.address}     type="text" onChange={handleInput} placeholder='Introduce la direccióm' />
+      <input id="address"      className='form-control mb-3'      value={form.address}     type="text" onChange={handleInput} placeholder='Introduce la dirección' />
       <input id="postalCode"  className='form-control mb-3'      value={form.postalCode}  type="text" onChange={handleInput} placeholder='Introduce el código postal' />
       <input id="city"        className='form-control mb-3'      value={form.city}        type="text" onChange={handleInput} placeholder='Introduce la ciudad' />
-      <input type="submit"    className='tn btn-success ml-auto' value="Registrar" />
+      <input type="submit"    className='btn btn-success ml-auto' value="Registrar" />
     </form>
   )
 }

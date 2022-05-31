@@ -2,7 +2,10 @@ import './App.css';
 import FirstComponent, {SecondComponent, ThirdComponent} from './components/FirstComponent';
 import Counter from "./components/Counter";
 import UseEffectComponet from './components/UseEffectComponet';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
+import UseContextComponent from './components/UseContextComponent';
+
+export const GlobalContext = createContext();
 
 function App() {
 
@@ -19,6 +22,9 @@ function App() {
       <FirstComponent title="Otro título"/>
       <SecondComponent />
       <ThirdComponent />
+      <GlobalContext.Provider value = "Soy un string guardado en un contexto">
+          <UseContextComponent />
+      </GlobalContext.Provider>  
     </div>
   );
 }

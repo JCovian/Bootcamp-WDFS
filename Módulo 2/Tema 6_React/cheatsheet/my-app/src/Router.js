@@ -10,7 +10,10 @@ export default function Router() {
         <BrowserRouter>
           <NavLink exact to="/" activeClassName="active">Ir a inicio</NavLink>
           <NavLink to="/dashboard" activeClassName="active">Panel de control</NavLink>
-          <NavLink to="/record/5" activeClassName="active">Record</NavLink>
+          <NavLink to="/record/1" activeClassName="active">Record</NavLink>
+          <NavLink to="/record/2" activeClassName="active">2</NavLink>
+          <NavLink to="/record/3" activeClassName="active">3</NavLink>
+          <NavLink to="/record/4" activeClassName="active">4</NavLink>
 
           <Switch>
             
@@ -23,6 +26,7 @@ export default function Router() {
             
           </Switch>     
         </BrowserRouter>
+        <h2>Footer común</h2>
     </div>
   );
 }

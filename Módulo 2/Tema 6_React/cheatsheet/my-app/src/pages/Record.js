@@ -19,7 +19,7 @@ export default function Record() {
   return (
     <div>
         {/*Record of {props.match.params.user};*/}
-        <h2>Record of {user}</h2>
+        <h2>Record of user {user}</h2>
         <ul>
           <li>{userData.data?.email}</li>
           <li>{userData.data?.first_name}</li>

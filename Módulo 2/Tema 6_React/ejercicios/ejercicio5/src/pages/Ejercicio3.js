@@ -3,7 +3,7 @@ import '../App.css';
 import Agenda from "../components/Agenda";
 import Formulario from "../components/Formulario";
 
-function App() {
+function Ejercicio3() {
 
   const initialContactState= [
     {name: "Jose", lastName: "Covián Ornia", address: "Laviada 10", city: "Oviedo", postalCode: 33011, phoneNumber: 615186914},      
@@ -23,4 +23,4 @@ function App() {
   );
 }
 
-export default App;
+export default Ejercicio3;

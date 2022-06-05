@@ -1,6 +1,9 @@
-import React from 'react'
+import { useContext } from "react";
+import { GlobalContext } from "../App";
 
-export default function Agenda({ contacts, setContacts }) {
+export default function Agenda() {
+
+  const {contacts, setContacts} = useContext(GlobalContext);
   
   const removeContact = phoneNumber=> {
     return e => {

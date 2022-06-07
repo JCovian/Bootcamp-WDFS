@@ -6,8 +6,8 @@ import Formulario from "./components/Formulario";
 function App() {
 
   const initialContactState= [
-    {name: "Jose", lastName: "Covián Ornia", address: "Laviada 10", city: "Oviedo", postalCode: 33011, phoneNumber: 615186914},      
-    {name: "Javier", lastName: "Alvariño Mesa", address: "Lg Granas", city: "Villayón", postalCode: 33472, phoneNumber: 640572819},
+    {name: "Michael", lastName: "Jackson", address: "Mulholland Drive", city: "Los Angeles", postalCode: 20250, phoneNumber: 422523336},      
+    {name: "Aitor", lastName: "Tilla", address: "C/ de Patata", city: "Cebolla", postalCode: 33001, phoneNumber: 855633322},
     {name: "Felipe", lastName: "Borbón y Grecia", address: "Palacio de la Zarzuela", city: "Madrid", postalCode: 28001, phoneNumber: 654321123},
   ];
 

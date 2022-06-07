@@ -4,7 +4,7 @@ export default function Agenda({ contacts, setContacts }) {
   
   const removeContact = phoneNumber=> {
     return e => {
-      setContacts(contacts.filter(contact => contact.phoneNumber != phoneNumber));
+      setContacts(contacts.filter(contact => contact.phoneNumber !== phoneNumber));
     } 
   }
 

@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
 const User = require("../models/user");
 
 router.post("/", (req, res) => {
@@ -15,7 +16,12 @@ router.post("/", (req, res) => {
         } else if (!bcrypt.compareSync(body.password, userDB.password)) {
             res.status(400).json({ok: false, error: {message: "Invalid password"}});
         } else {
-            res.status(200).json({ok: true, user: userDB});
+            const token = jwt.sign(
+                {user: userDB}, // Payload
+                process.env.SEED,
+                {expiresIn: 20}
+            );
+            res.status(200).json({ok: true, token, user: userDB});
         }
     })
 });
